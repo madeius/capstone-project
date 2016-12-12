@@ -1,0 +1,16 @@
+net: "/home/ubuntu/cats-dogs/caffe_model/caffenet_train_val_1.prototxt"
+test_iter: 1000
+test_interval: 1000
+base_lr: 0.001  # begin training at a learning rate of 0.01 = 1e-2
+lr_policy: "step" # learning rate policy: drop the learning rate in "steps"
+                  # by a factor of gamma every stepsize iterations
+gamma: 0.1 # drop the learning rate by a factor of 10
+                  # (i.e., multiply it by a factor of gamma = 0.1)
+stepsize: 2500 # drop the learning rate every 2500 iterations
+display: 50
+max_iter: 40000 # train for 40000 iterations total
+momentum: 0.9
+weight_decay: 0.0005
+snapshot: 5000
+snapshot_prefix: "/home/ubuntu/cats-dogs/caffe_model"
+solver_mode: GPU
